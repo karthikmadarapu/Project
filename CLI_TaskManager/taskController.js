@@ -18,7 +18,7 @@ function listTasks(){
 
 }
 
-function addTasks(){
+function addTask(){
     if(!title){
         console.log('Error: Task title cannot be empty.');
         return;
@@ -37,7 +37,7 @@ function addTasks(){
 }
 
 
-function toggleTasks(id){
+function toggleTask(id){
     const tasks = loadTasks();
     let found = false;
 
@@ -60,7 +60,7 @@ function toggleTasks(id){
      console.log(`Success: Toggled status for task ID ${id}`);
 }
 
-function deleteTasks(id){
+function deleteTask(id){
     const tasks = loadTasks();
     const parsedId = parseInt(id);
     const filteredTasks = tasks.filter(task => task.id !== parsedId);
@@ -75,4 +75,4 @@ function deleteTasks(id){
 
 }
 
-module.exports = {listTasks, addTasks, toggleTasks, deleteTasks};
+module.exports = {listTasks, addTask, toggleTask, deleteTask};
