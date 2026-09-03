@@ -18,7 +18,7 @@ function listTasks(){
 
 }
 
-function addTask(){
+function addTask(title){
     if(!title){
         console.log('Error: Task title cannot be empty.');
         return;
