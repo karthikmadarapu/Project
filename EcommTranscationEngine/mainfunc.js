@@ -46,7 +46,7 @@ function financialTransactionData(rawJson){
             price: txn.price * rate,
             tax : txn.tax * rate,
             shipping : txn.shipping * rate,
-            currency: "USD"
+            currency: "USD" //default
 
         };
 
@@ -80,4 +80,4 @@ function financialTransactionData(rawJson){
 
 
 console.log("--- FINANCIAL DASHBOARD REPORT ---");
-console.log(financialTransactionData(rawTransactionDataJSON));
+console.log(financialTransactionData(rawTransactionDataJSON)); 
