@@ -14,7 +14,7 @@ switch (command) {
     toggleTask(args);
     break;
   case 'delete':
-    deleteTask(args);
+    deleteTask(args); 
     break;
   default:
     console.log('Invalid command. Usage:');
