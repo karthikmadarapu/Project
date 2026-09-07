@@ -1,8 +1,8 @@
 // config.js 
 
-const API_KEY = `eb89ac38b8a754f5424e96f69068eb60`;
-const BASE_URL = 'https://openweathermap.org';
-
+const API_KEY = process.env.OPENWEATHER_API_KEY; 
+// const BASE_URL = 'https://openweathermap.org';
+const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'; 
 /**
  * Constructs a safe, encoded URL for the OpenWeather API
   * param {string} city 

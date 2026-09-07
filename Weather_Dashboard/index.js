@@ -2,7 +2,7 @@
 //  It loops over multiple cities asynchronously, catches specific errors (like network failures or bad city inputs), and prints the clean, destructured summaries.
 
 
-
+require('dotenv').config();
 // index.js
 const { fetchCleanWeather } = require('./weatherService');
 

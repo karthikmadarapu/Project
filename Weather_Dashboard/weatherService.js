@@ -6,7 +6,7 @@ async function fetchCleanWeather(city){
     const url = buildWeatherUrl(city);
 
   console.log(`[LOADING] Fetching weather data for "${city}"...`);
-
+  console.log("Testing URL: ", url);
   try{
     const response = await fetch(url);
     if(!response.ok){
@@ -31,7 +31,7 @@ async function fetchCleanWeather(city){
          };
   }
      catch(error){
-        throw error(error);
+        throw error;
      }
      finally{
          // Micro-Problem 2: Guaranteed to execute whether the fetch wins or crashes
