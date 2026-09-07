@@ -8,6 +8,7 @@ const BASE_URL = 'https://openweathermap.org';
   * param {string} city 
  * returns {string} Fully structured URL
  */
+// This file isolates your credentials and handles the string construction. It ensures spatial names with spaces (like "New York") are safely encoded for the internet using encodeURIComponent.
 
 function buildWeatherUrl(city) {
     if(!city|| city.trim() === "")  {
