@@ -6,7 +6,7 @@ async function fetchCleanWeather(city){
     const url = buildWeatherUrl(city);
 
   console.log(`[LOADING] Fetching weather data for "${city}"...`);
-  console.log("Testing URL: ", url);
+
   try{
     const response = await fetch(url);
     if(!response.ok){
