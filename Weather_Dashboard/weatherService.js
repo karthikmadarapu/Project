@@ -21,7 +21,7 @@ async function fetchCleanWeather(city){
         weather: [{ description: condition }]
         } = rawData;
 
-        return {
+        return { //best practices for syntax error handling 
           locationName,
           currentTemp: `${Math.round(currentTemp)}°C`,
           minTemp: `${Math.round(minTemp)}°C`,
