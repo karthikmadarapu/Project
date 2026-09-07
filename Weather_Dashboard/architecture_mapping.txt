@@ -1,0 +1,25 @@
+       [ User Command / Interface Layer ] (Cli Router or UI)
+                       │
+                       ▼
+ ┌───────────────────────────────────────────┐
+ │        Weather Service Controller         │
+ └─────────────────────┬─────────────────────┘
+                       │ 1. Requests data for "London"
+                       ▼
+ ┌───────────────────────────────────────────┐
+ │          API Engine / Fetcher             │ <--- Network Error Boundary
+ └─────────────────────┬─────────────────────┘      (try...catch...finally)
+                       │ 2. Makes HTTP fetch()
+                       ▼
+            [ Live OpenWeather API ]
+                       │
+                       │ 3. Returns complex, bloated raw JSON
+                       ▼
+ ┌───────────────────────────────────────────┐
+ │         Data Sanitizer / Parser           │
+ └─────────────────────┬─────────────────────┘
+                       │ 4. Filters & renames variables via destructuring
+                       ▼
+ ┌───────────────────────────────────────────┐
+ │           Presentation Layer              │ 
+ └───────────────────────────────────────────┘
