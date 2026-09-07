@@ -1,6 +1,6 @@
 // config.js 
 
-const API_KEY = `YOUR_API_KEY`;
+const API_KEY = `eb89ac38b8a754f5424e96f69068eb60`;
 const BASE_URL = 'https://openweathermap.org';
 
 /**
