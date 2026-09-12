@@ -44,3 +44,6 @@ const user_69 = new BankAccount("Cristiano Ronaldo", 90000);
 
 
 console.log(`${user_1.accHolder} = ${user_1.balance} & ${user_69.accHolder} = ${user_69.balance} fkkk u are a brokie!!!!!`);
+
+user_69.deposit(90000);
+user_1.withDraw(4000);
