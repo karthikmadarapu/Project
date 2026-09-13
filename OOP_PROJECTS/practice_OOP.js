@@ -123,6 +123,20 @@ class Mage extends Character {
 
  }
 
+ const finalBoss = new Character("Thanos", "Titan", 500 );
+
+
+ const party = [
+    new Warrior("Thor", 150, 100),
+    new Mage("Merlin", 80, 100),
+    new Warrior("Achilles", 120, 80)
+ ];
+for(const hero of party){
+
+    hero.attack(finalBoss);
+    console.log("---------------------------------");
+}
+
 
 
  const char_1 = new Character("thor", "ThunderGod", 100);
