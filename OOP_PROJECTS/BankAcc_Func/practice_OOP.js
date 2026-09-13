@@ -38,19 +38,30 @@ console.log(person_2.name);
 
 
 class Character{
+    #health;
      
     constructor(name, heroClass, health){
         this.name = name;
         this.heroClass = heroClass;
-        this.health = health;
+        this.#health = health;
+    }
+    
+    getHealth(){
+        return this.#health;
     }
 
     takeDamage(amount){
-        this.health -= amount;
-        console.log(`${this.name} took ${amount}damage! Health is now ${this.health}`);
+        this.#health -= amount;
+        console.log(`${this.name} took ${amount}damage! Health is now ${this.#health}`);
     }
 
-    
+   
+    attack(targetCharacter){
+
+        console.log(`${this.name} attacks ${targetCharacter.name}!`);
+        targetCharacter.takeDamage(20);
+
+    }
 
 
 }
@@ -67,3 +78,5 @@ class Character{
  console.log(char_1.health);
   char_1.takeDamage(25);
  console.log(char_2.health);
+
+ char_1.attack(char_2);
